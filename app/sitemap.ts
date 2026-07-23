@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://ВАШ-ДОМЕН.ua",
+      url: "https://sypuchka-one.vercel.app",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
