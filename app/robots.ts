@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
     },
 
-    sitemap: "https://ВАШ-ДОМЕН.ua/sitemap.xml",
+    sitemap: "https://sypuchka-one.vercel.app/sitemap.xml",
   };
 }
