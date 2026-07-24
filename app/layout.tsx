@@ -2,13 +2,14 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 
 import "./globals.css";
+import ClarityProvider from "./clarity";
 
 const geist = Geist({
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
+  metadataBase: new URL("https://sypuchka-one.vercel.app"),
 
   title: {
     default: "Доставка сипучих матеріалів | Пісок, Щебінь, Відсів, ЩПС",
@@ -72,7 +73,7 @@ export const metadata: Metadata = {
     description:
       "Пісок • Щебінь • Відсів • ЩПС • Чорнозем • Ґрунт",
 
-    url: "http://localhost:3000",
+    url: "https://sypuchka-one.vercel.app",
 
     siteName: "Доставка сипучих матеріалів",
 
@@ -110,6 +111,7 @@ export default function RootLayout({
   return (
     <html lang="uk" className={geist.className}>
       <body className="bg-black overflow-x-hidden text-white">
+        <ClarityProvider />
         {children}
       </body>
     </html>
