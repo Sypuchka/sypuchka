@@ -4,14 +4,31 @@ import { notFound } from "next/navigation";
 import { areas } from "../../components/ServiceAreas";
 
 const materials = [
-  "Пісок / Песок",
-  "Щебінь / Щебень",
-  "Відсів / Отсев",
-  "ЩПС",
-  "Чорнозем / Чернозём",
-  "Ґрунт / Грунт",
+  {
+    uk: "Річковий та яружний пісок",
+    ru: "Речной и карьерный песок",
+  },
+  {
+    uk: "Щебінь різних фракцій",
+    ru: "Щебень разных фракций",
+  },
+  {
+    uk: "Відсів",
+    ru: "Отсев",
+  },
+  {
+    uk: "ЩПС",
+    ru: "ЩПС — щебенево-піщана суміш",
+  },
+  {
+    uk: "Родючий чорнозем",
+    ru: "Плодородный чернозём",
+  },
+  {
+    uk: "Ґрунт для підсипки",
+    ru: "Грунт для подсыпки",
+  },
 ];
-
 
 function slugify(value: string) {
   const map: Record<string, string> = {
@@ -34,7 +51,6 @@ function slugify(value: string) {
     .replace(/^-|-$/g, "");
 }
 
-
 export function generateStaticParams() {
   return areas.map((area) => ({ slug: slugify(area) }));
 }
@@ -50,10 +66,12 @@ export async function generateMetadata({
   if (!area) return {};
 
   return {
-    title: `Доставка піску, щебеню та чорнозему — ${area}`,
-    description: `Замовляйте пісок, щебінь, відсів, ЩПС, чорнозем і ґрунт з доставкою в ${area}. Уточнюйте ціну та наявність за телефоном.`,
+    title: `Пісок, щебінь і доставка сипучих матеріалів — ${area}`,
+    description:
+      `Купити пісок, щебінь, відсів, ЩПС, чорнозем і ґрунт з доставкою у ${area}. ` +
+      `Песок, щебень и другие сыпучие материалы с доставкой. Телефон 073 757 77 90.`,
     alternates: {
-      canonical: `/dostavka/${slug}`,
+      canonical: `https://www.sypuchka.com.ua/dostavka/${slug}`,
     },
   };
 }
@@ -76,41 +94,68 @@ export default async function DeliveryAreaPage({
         </a>
 
         <h1 className="mt-8 text-3xl font-black md:text-5xl">
-          Доставка сипучих матеріалів у {area}
+          Пісок, щебінь та сипучі матеріали з доставкою у {area}
         </h1>
 
         <p className="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
-          Доставляємо сипучі будівельні матеріали для будівництва,
-          благоустрою та земельних робіт у {area}. Зверніться до нас,
-          щоб уточнити наявність, вартість матеріалу, обсяг і ціну доставки.
+          Доставляємо пісок, щебінь, відсів, ЩПС, чорнозем і ґрунт
+          у {area} та навколишні населені пункти. Матеріали для
+          будівництва, підсипки, благоустрою території та приватних
+          господарств.
+        </p>
+
+        <p className="mt-4 max-w-3xl leading-7 text-zinc-300">
+          У нас можна замовити речной или карьерный песок,
+          щебень разных фракций, отсев, ЩПС, чернозём и грунт
+          с доставкой в {area}. Уточняйте доступность материалов,
+          необходимый объём и стоимость доставки по телефону.
         </p>
 
         <h2 className="mt-10 text-2xl font-bold">
-          Наш асортимент
+          Наш асортимент матеріалів
         </h2>
 
         <ul className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {materials.map((material) => (
             <li
-              key={material}
+              key={material.uk}
               className="rounded-xl border border-zinc-800 bg-zinc-900 p-5"
             >
-              {material}
+              <p className="font-bold">{material.uk}</p>
+              <p className="mt-2 text-sm text-zinc-400">
+                {material.ru}
+              </p>
             </li>
           ))}
         </ul>
 
-        <p className="mt-8 text-zinc-300">
-          Вартість залежить від виду матеріалу, потрібного обсягу та
-          адреси доставки. Зателефонуйте, щоб погодити замовлення.
+        <h2 className="mt-10 text-2xl font-bold">
+          Доставка та замовлення
+        </h2>
+
+        <p className="mt-4 leading-7 text-zinc-300">
+          Вартість замовлення залежить від виду матеріалу,
+          обсягу та адреси доставки. Телефонуйте, щоб уточнити
+          ціну та погодити доставку у {area}.
+        </p>
+
+        <p className="mt-4 leading-7 text-zinc-300">
+          Доставка самоскидами від 1 до 23 тонн.
+          Працюємо щодня з 08:00 до 21:00.
         </p>
 
         <a
-          href="/"
+          href="tel:0737577790"
           className="mt-8 inline-block rounded-xl bg-orange-500 px-6 py-4 font-bold text-black"
         >
-          Замовити доставку
+          Замовити доставку — 073 757 77 90
         </a>
+
+        <p className="mt-8">
+          <a href="/" className="text-orange-500 hover:underline">
+            Перейти на головну сторінку
+          </a>
+        </p>
       </div>
     </main>
   );
