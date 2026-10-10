@@ -9,7 +9,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://sypuchka-one.vercel.app"),
+  metadataBase: new URL("https://www.sypuchka.com.ua"),
 
   title: {
     default: "Доставка сипучих матеріалів | Пісок, Щебінь, Відсів, ЩПС",
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     description:
       "Пісок • Щебінь • Відсів • ЩПС • Чорнозем • Ґрунт",
 
-    url: "https://sypuchka-one.vercel.app",
+    url: "https://www.sypuchka.com.ua",
 
     siteName: "Доставка сипучих матеріалів",
 
