@@ -1,6 +1,6 @@
-
 import type { MetadataRoute } from "next";
 import { areas } from "./components/ServiceAreas";
+import { materials } from "./materialy/materials";
 
 function slugify(value: string) {
   const map: Record<string, string> = {
@@ -33,6 +33,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+    ...materials.map((material) => ({
+      url: `${baseUrl}/materialy/${material.slug}`,
+      changeFrequency: "weekly" as const,
+      priority: 0.9,
+    })),
     ...areas.map((area) => ({
       url: `${baseUrl}/dostavka/${slugify(area)}`,
       lastModified: new Date(),
