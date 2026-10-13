@@ -92,9 +92,11 @@ export default function Materials() {
 
                 <div className="p-6">
                   <h3 className="mb-6 text-2xl font-black text-white">
-                    <Link href={item.href} className="hover:text-orange-500">
-                      {item.title}
-                    </Link>
+                    
+<Link href={item.href} className="hover:text-orange-500">
+  {item.title}
+</Link>
+
                   </h3>
 
                   <Link
