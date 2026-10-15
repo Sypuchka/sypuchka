@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -74,7 +75,7 @@ export default function Materials() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg text-zinc-300 md:text-xl">
-            Постачаємо якісні сипучі матеріали для будівництва,
+            Постачаємо сипучі матеріали для будівництва,
             благоустрою території та приватних господарств.
           </p>
         </div>
@@ -95,7 +96,7 @@ export default function Materials() {
                     src={item.image}
                     alt={item.title}
                     fill
-                    sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
