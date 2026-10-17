@@ -62,10 +62,10 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
-  },
+  icon: "/ChatGPT%20Image%203%20%D0%B8%D1%8E%D0%BB.%202026%20%D0%B3.%2C%2019_00_34.png",
+  shortcut: "/ChatGPT%20Image%203%20%D0%B8%D1%8E%D0%BB.%202026%20%D0%B3.%2C%2019_00_34.png",
+  apple: "/ChatGPT%20Image%203%20%D0%B8%D1%8E%D0%BB.%202026%20%D0%B3.%2C%2019_00_34.png",
+},
 
   openGraph: {
     title: "Доставка сипучих матеріалів",
