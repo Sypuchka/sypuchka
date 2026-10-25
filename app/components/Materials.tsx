@@ -60,10 +60,28 @@ const materials = [
     image: "/images/materials/grunt-pidsypka.jpg.png",
     href: "/materialy/grunt",
   },
+];
+
+const organicFertilizers = [
   {
-    title: "Органічні добрива",
+    title: "Курячий послід",
+    description: "Органічне добриво для саду та городу.",
     image: "/images/materials/chornozem.jpg.png",
-    href: "/materialy/organichni-dobryva",
+  },
+  {
+    title: "Грибний компост",
+    description: "Органічний компост для поліпшення ґрунту.",
+    image: "/images/materials/chornozem.jpg.png",
+  },
+  {
+    title: "Коров'ячий гній-перегній",
+    description: "Перегній для збагачення ґрунту органічними речовинами.",
+    image: "/images/materials/chornozem.jpg.png",
+  },
+  {
+    title: "Кінський гній-перегній",
+    description: "Органічне добриво для садових і городніх ділянок.",
+    image: "/images/materials/chornozem.jpg.png",
   },
 ];
 
@@ -82,7 +100,6 @@ export default function Materials() {
           <p className="mx-auto mt-6 max-w-3xl text-lg text-zinc-300 md:text-xl">
             Постачаємо сипучі матеріали для будівництва,
             благоустрою території та приватних господарств.
-            Також пропонуємо органічні добрива для саду та городу.
           </p>
         </div>
 
@@ -135,6 +152,53 @@ export default function Materials() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div id="organic-fertilizers" className="mt-24 scroll-mt-24">
+          <div className="mb-12 text-center">
+            <h2 className="text-4xl font-black md:text-5xl">
+              Органічні Добрива
+            </h2>
+            <p className="mx-auto mt-5 max-w-3xl text-lg text-zinc-300 md:text-xl">
+              Оберіть потрібний вид органічного добрива для саду та городу.
+              Наявність, обсяг і доставку можна уточнити телефоном.
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {organicFertilizers.map((item) => (
+              <article
+                key={item.title}
+                className="group overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500"
+              >
+                <div className="relative h-56 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                </div>
+
+                <div className="p-5">
+                  <h3 className="mb-3 text-xl font-black text-white">
+                    {item.title}
+                  </h3>
+                  <p className="mb-5 min-h-12 text-sm leading-6 text-zinc-300">
+                    {item.description}
+                  </p>
+                  <a
+                    href="tel:+380737577790"
+                    className="block rounded-full bg-orange-500 px-4 py-3 text-center font-bold text-white transition hover:bg-orange-600"
+                  >
+                    Уточнити ціну
+                  </a>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>
