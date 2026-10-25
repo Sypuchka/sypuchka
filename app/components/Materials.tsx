@@ -60,6 +60,11 @@ const materials = [
     image: "/images/materials/grunt-pidsypka.jpg.png",
     href: "/materialy/grunt",
   },
+  {
+    title: "Органічні добрива",
+    image: "/images/materials/chornozem.jpg.png",
+    href: "/materialy/organichni-dobryva",
+  },
 ];
 
 export default function Materials() {
@@ -77,6 +82,7 @@ export default function Materials() {
           <p className="mx-auto mt-6 max-w-3xl text-lg text-zinc-300 md:text-xl">
             Постачаємо сипучі матеріали для будівництва,
             благоустрою території та приватних господарств.
+            Також пропонуємо органічні добрива для саду та городу.
           </p>
         </div>
 
