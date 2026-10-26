@@ -2,149 +2,98 @@
 
 import Image from "next/image";
 
-type Material = {
-  title: string;
-  description: string;
-  image: string;
-};
-
-const materials: Material[] = [
-  {
-    title: "Чорнозем",
-    description: "Родючий ґрунт для городу, саду та озеленення ділянки.",
-    image: "/images/materials/chornozem.jpg.png",
-  },
-  {
-    title: "Ґрунтова підсипка",
-    description: "Матеріал для вирівнювання ділянки та підготовки основи.",
-    image: "/images/materials/grunt-pidsypka.jpg.png",
-  },
+const materials = [
   {
     title: "Пісок річковий",
-    description: "Річковий пісок для будівельних робіт і благоустрою.",
     image: "/images/materials/pisok-richkovyi.jpg.png",
   },
   {
     title: "Пісок яружний",
-    description: "Яружний пісок для будівельних і господарських потреб.",
     image: "/images/materials/pisok-yaruzhnyi.jpg.png",
   },
   {
-    title: "Щебінь 5–20",
-    description: "Щебінь фракції 5–20 мм для будівництва та благоустрою.",
+    title: "Відсів",
+    image: "/images/materials/vidsiv.jpg",
+  },
+  {
+    title: "Щебінь 5-20",
     image: "/images/materials/shchebin-5-20.jpg",
   },
   {
-    title: "Щебінь 10–20",
-    description: "Щебінь фракції 10–20 мм для бетонних робіт та основ.",
+    title: "Щебінь 10-20",
     image: "/images/materials/shchebin-10-20.jpg",
   },
   {
-    title: "Щебінь 20–40",
-    description: "Щебінь фракції 20–40 мм для будівельних робіт і під'їздів.",
+    title: "Щебінь 20-40",
     image: "/images/materials/shchebin-20-40.jpg",
   },
   {
-    title: "Щебінь 40–70",
-    description: "Крупна фракція щебеню для основ і дорожніх робіт.",
+    title: "Щебінь 40-70",
     image: "/images/materials/shchebin-40-70.png",
   },
   {
-    title: "ЩПС 0–40",
-    description: "Щебенево-піщана суміш для підготовки основ і доріжок.",
+    title: "ЩПС 0-40",
     image: "/images/materials/shps-0-40.png",
   },
   {
-    title: "ЩПС 0–70",
-    description: "Щебенево-піщана суміш для міцної основи та будівельних робіт.",
+    title: "ЩПС 0-70",
     image: "/images/materials/shps-0-70.png",
   },
   {
-    title: "Відсів",
-    description: "Дрібний кам'яний матеріал для благоустрою та підготовки основ.",
-    image: "/images/materials/vidsiv.jpg",
+    title: "Чорнозем родючий",
+    image: "/images/materials/chornozem.jpg.png",
+  },
+  {
+    title: "Ґрунт на підсипку",
+    image: "/images/materials/grunt-pidsypka.jpg.png",
   },
 ];
-
-const organicFertilizers: Material[] = [
-  {
-    title: "Курячий послід",
-    description:
-      "Ефективне органічне добриво, багате на поживні речовини для саду та городу.",
-    image: "/images/materials/kyrka.jpg.png",
-  },
-  {
-    title: "Грибний компост",
-    description:
-      "Натуральний субстрат, який покращує структуру ґрунту та збагачує його корисними речовинами.",
-    image: "/images/materials/mushroom-compost.jpg.png",
-  },
-  {
-    title: "Коров'ячий гній-перегній",
-    description:
-      "Перепрілий гній для збагачення ґрунту органічними речовинами та покращення родючості.",
-    image: "/images/materials/cow-manure.jpg.png",
-  },
-  {
-    title: "Кінський гній-перегній",
-    description: "Натуральне добриво для саду, городу та квітників.",
-    image: "/images/materials/horse-manure.jpg.png",
-  },
-];
-
-function MaterialCard({ item }: { item: Material }) {
-  return (
-    <article className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md">
-      <div className="relative h-56 w-full bg-gray-100">
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-        />
-      </div>
-      <div className="p-5">
-        <h3 className="mb-2 text-xl font-semibold text-gray-900">
-          {item.title}
-        </h3>
-        <p className="text-sm leading-6 text-gray-600">{item.description}</p>
-      </div>
-    </article>
-  );
-}
 
 export default function Materials() {
   return (
-    <section id="materials" className="py-16">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+    <section id="materials" className="bg-black py-20 md:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl font-black text-white md:text-6xl">
             Наші матеріали
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-            Матеріали для будівництва, благоустрою, саду та городу.
+
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-zinc-300 md:text-xl">
+            Постачаємо якісні сипучі матеріали для будівництва,
+            благоустрою території та приватних господарств.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {materials.map((item) => (
-            <MaterialCard key={item.title} item={item} />
-          ))}
-        </div>
+            <div key={item.title}>
+              <div className="group overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 shadow-xl transition-all duration-500 hover:-translate-y-3 hover:border-orange-500 hover:shadow-2xl hover:shadow-orange-500/20">
+                <div className="relative h-72 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={`${item.title} з доставкою по Київській області`}
+                    fill
+                    sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
+                    className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1"
+                  />
 
-        <div className="mb-10 mt-20 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Органічні добрива
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-            Натуральні добрива для родючого ґрунту та здорового росту рослин.
-          </p>
-        </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+                </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {organicFertilizers.map((item) => (
-            <MaterialCard key={item.title} item={item} />
+                <div className="p-6">
+                  <h3 className="mb-6 text-2xl font-black text-white">
+                    {item.title}
+                  </h3>
+
+                  <a
+                    href="tel:+380737577790"
+                    className="block rounded-full bg-orange-500 py-4 text-center text-lg font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-600"
+                  >
+                    📞 Замовити доставку
+                  </a>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
