@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.sypuchka.com.ua"),
 
   title: {
-    default: "Доставка сипучих матеріалів | Пісок, Щебінь, Відсів, ЩПС",
-    template: "%s | Доставка сипучих матеріалів",
+    default: "Sypuchka — доставка сипучих матеріалів і добрив",
+    template: "%s | Sypuchka — матеріали та добрива",
   },
 
   description:
@@ -53,13 +53,13 @@ export const metadata: Metadata = {
 
   authors: [
     {
-      name: "Доставка сипучих матеріалів",
+      name: "Sypuchka — доставка сипучих матеріалів і добрив",
     },
   ],
 
-  creator: "Доставка сипучих матеріалів",
+  creator: "Sypuchka — доставка сипучих матеріалів і добрив",
 
-  category: "Будівництво",
+  category: "Будівництво та органічні добрива",
 
   robots: {
     index: true,
@@ -70,46 +70,35 @@ export const metadata: Metadata = {
     canonical: "/",
   },
 
- 
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
     apple: "/logo.png",
   },
 
-
   openGraph: {
-    title: "Доставка сипучих матеріалів",
-
+    title: "Sypuchka — доставка сипучих матеріалів і добрив",
     description:
       "Пісок • Щебінь • Чорнозем • Органічні добрива з доставкою",
-
     url: "https://www.sypuchka.com.ua",
-
-    siteName: "Доставка сипучих матеріалів",
-
+    siteName: "Sypuchka — доставка сипучих матеріалів і добрив",
     locale: "uk_UA",
-
     type: "website",
-
     images: [
       {
         url: "/preview.jpg",
         width: 1200,
         height: 630,
-        alt: "Доставка сипучих матеріалів",
+        alt: "Sypuchka — доставка сипучих матеріалів і добрив",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-
-    title: "Доставка сипучих матеріалів",
-
+    title: "Sypuchka — доставка сипучих матеріалів і добрив",
     description:
-      "Пісок • Щебінь • Відсів • ЩПС • Чорнозем • Ґрунт",
-
+      "Пісок • Щебінь • Відсів • ЩПС • Чорнозем • Ґрунт • Органічні добрива",
     images: ["/preview.jpg"],
   },
 };
