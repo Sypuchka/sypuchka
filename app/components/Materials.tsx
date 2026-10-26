@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Link from "next/link";
 
 const materials = [
   { title: "Пісок річковий", image: "/images/materials/pisok-richkovyi.jpg.png", href: "/materialy/pisok" },
@@ -19,10 +20,10 @@ const materials = [
 ];
 
 const organicFertilizers = [
-  { title: "Курячий послід", description: "Ефективне органічне добриво, багате на поживні речовини для саду та городу.", image: "/images/materials/kyrka.jpg.png" },
-  { title: "Грибний компост", description: "Натуральний субстрат, який покращує структуру ґрунту та збагачує його корисними речовинами.", image: "/images/materials/mushroom-compost.jpg.png" },
-  { title: "Коров'ячий гній-перегній", description: "Перепрілий гній для збагачення ґрунту органічними речовинами та покращення родючості.", image: "/images/materials/cow-manure.jpg.png" },
-  { title: "Кінський гній-перегній", description: "Натуральне добриво для саду, городу та квітників.", image: "/images/materials/horse-manure.jpg.png" },
+  { slug: "kuryachyi-poslid", title: "Курячий послід", description: "Ефективне органічне добриво, багате на поживні речовини для саду та городу.", image: "/images/materials/kyrka.jpg.png" },
+  { slug: "grybnyi-kompost", title: "Грибний компост", description: "Натуральний субстрат, який покращує структуру ґрунту та збагачує його корисними речовинами.", image: "/images/materials/mushroom-compost.jpg.png" },
+  { slug: "korovyachyi-hnii-perehnii", title: "Коров'ячий гній-перегній", description: "Перепрілий гній для збагачення ґрунту органічними речовинами та покращення родючості.", image: "/images/materials/cow-manure.jpg.png" },
+  { slug: "kinskyi-hnii-perehnii", title: "Кінський гній-перегній", description: "Натуральне добриво для саду, городу та квітників.", image: "/images/materials/horse-manure.jpg.png" },
 ];
 
 export default function Materials() {
@@ -48,8 +49,8 @@ export default function Materials() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {organicFertilizers.map((item) => (
               <article key={item.title} className="group overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500">
-                <div className="relative h-56 overflow-hidden"><img src={item.image} alt={item.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" /><div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" /></div>
-                <div className="p-5"><h3 className="mb-3 text-xl font-black text-white">{item.title}</h3><p className="mb-5 min-h-12 text-sm leading-6 text-zinc-300">{item.description}</p><a href="tel:+380737577790" className="block rounded-full bg-orange-500 px-4 py-3 text-center font-bold text-white transition hover:bg-orange-600">Замовити за тел. 073 757 77 90</a></div>
+                <Link href={`/dobryva/${item.slug}`} aria-label={`${item.title} — детальніше`} className="relative block h-56 overflow-hidden"><img src={item.image} alt={item.title} loading="lazy" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110" /><div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" /></Link>
+                <div className="p-5"><h3 className="mb-3 text-xl font-black text-white"><Link href={`/dobryva/${item.slug}`} className="transition hover:text-orange-400">{item.title}</Link></h3><p className="mb-4 min-h-12 text-sm leading-6 text-zinc-300">{item.description}</p><Link href={`/dobryva/${item.slug}`} className="mb-4 block text-center font-semibold text-orange-400 hover:underline">Детальніше про добриво</Link><a href="tel:+380737577790" className="block rounded-full bg-orange-500 px-4 py-3 text-center font-bold text-white transition hover:bg-orange-600">Замовити за тел. 073 757 77 90</a></div>
               </article>
             ))}
           </div>
