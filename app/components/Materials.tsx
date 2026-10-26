@@ -19,10 +19,10 @@ const materials = [
 ];
 
 const organicFertilizers = [
-  { title: "Курячий послід", description: "Ефективне органічне добриво, багате на поживні речовини для саду та городу.", image: "https://commons.wikimedia.org/wiki/Special:FilePath/Cow_dung_compost.jpg" },
-  { title: "Грибний компост", description: "Натуральний субстрат, який покращує структуру ґрунту та збагачує його корисними речовинами.", image: "https://commons.wikimedia.org/wiki/Special:FilePath/Mushroom_compost.jpg" },
-  { title: "Коров'ячий гній-перегній", description: "Перепрілий гній для збагачення ґрунту органічними речовинами та покращення родючості.", image: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=85" },
-  { title: "Кінський гній-перегній", description: "Натуральне добриво для саду, городу та квітників.", image: "https://ian.umces.edu/media-library/horse-manure-compost-pile/" },
+  { title: "Курячий послід", description: "Ефективне органічне добриво, багате на поживні речовини для саду та городу.", image: "/images/materials/kyrka.jpg.png" },
+  { title: "Грибний компост", description: "Натуральний субстрат, який покращує структуру ґрунту та збагачує його корисними речовинами.", image: "/images/materials/mushroom-compost.jpg.png" },
+  { title: "Коров'ячий гній-перегній", description: "Перепрілий гній для збагачення ґрунту органічними речовинами та покращення родючості.", image: "/images/materials/cow-manure.jpg.png" },
+  { title: "Кінський гній-перегній", description: "Натуральне добриво для саду, городу та квітників.", image: "/images/materials/horse-manure.jpg.png" },
 ];
 
 export default function Materials() {
