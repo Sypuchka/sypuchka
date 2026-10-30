@@ -45,26 +45,8 @@ export default async function FertilizerPage({ params }: PageProps) {
   const item = fertilizers.find((fertilizer) => fertilizer.slug === slug);
   if (!item) notFound();
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: item.name,
-    description: item.description,
-    image: [`${fertilizersBaseUrl}${item.image}`],
-    category: "Органічні добрива",
-    brand: { "@type": "Brand", name: "Sypuchka" },
-    offers: {
-      "@type": "Offer",
-      url: `${fertilizersBaseUrl}/dobryva/${item.slug}`,
-      priceCurrency: "UAH",
-      availability: "https://schema.org/InStock",
-      seller: { "@type": "Organization", name: "Sypuchka" },
-    },
-  };
-
   return (
     <main className="min-h-screen bg-black px-6 py-14 text-white">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-5xl">
         <Link href="/#organic-fertilizers" className="text-orange-400 hover:underline">← До органічних добрив</Link>
         <div className="mt-8 grid gap-10 md:grid-cols-2 md:items-start">
