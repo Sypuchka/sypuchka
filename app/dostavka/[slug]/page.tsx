@@ -52,6 +52,10 @@ export async function generateMetadata({
     alternates: {
       canonical: `https://www.sypuchka.com.ua/dostavka/${slug}`,
     },
+    robots: {
+      index: false,
+      follow: true,
+    },
     openGraph: {
       title: `Доставка сипучих матеріалів — ${area} | Сипучка`,
       description: `Пісок, щебінь та інші сипучі матеріали з доставкою за адресою в населеному пункті ${area}. Телефон: 073 757 77 90.`,
@@ -118,7 +122,7 @@ export default async function DeliveryAreaPage({
         </p>
 
         <a
-          href="tel:0737577790"
+          href="tel:+380737577790"
           className="mt-8 inline-block rounded-xl bg-orange-500 px-6 py-4 font-bold text-black"
         >
           Зателефонувати: 073 757 77 90
