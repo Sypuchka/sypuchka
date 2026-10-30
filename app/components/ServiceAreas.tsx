@@ -89,9 +89,30 @@ export const areas = [
   "Яцьки",
 ];
 
+function slugify(value: string) {
+  const map: Record<string, string> = {
+    а: "a", б: "b", в: "v", г: "h", ґ: "g",
+    д: "d", е: "e", є: "ye", ж: "zh", з: "z",
+    и: "y", і: "i", ї: "yi", й: "y", к: "k",
+    л: "l", м: "m", н: "n", о: "o", п: "p",
+    р: "r", с: "s", т: "t", у: "u", ф: "f",
+    х: "kh", ц: "ts", ч: "ch", ш: "sh", щ: "shch",
+    ю: "yu", я: "ya", ь: "",
+  };
+
+  return value
+    .toLowerCase()
+    .replace(/['’]/g, "")
+    .split("")
+    .map((char) => map[char] ?? char)
+    .join("")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 export default function ServiceAreas() {
   return (
-    <section className="bg-black py-20">
+    <section id="service-areas" className="bg-black py-20">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="mb-8 text-center text-4xl font-black text-white">
           Населені пункти, куди ми доставляємо
@@ -100,12 +121,13 @@ export default function ServiceAreas() {
         <div className="h-[420px] overflow-y-auto rounded-3xl border border-zinc-800 bg-zinc-900 p-6">
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {areas.map((area) => (
-              <div
+              <a
                 key={area}
-                className="rounded-xl border border-zinc-800 bg-zinc-800/40 px-4 py-3 text-white transition hover:border-orange-500"
+                href={`/dostavka/${slugify(area)}`}
+                className="rounded-xl border border-zinc-800 bg-zinc-800/40 px-4 py-3 text-white transition hover:border-orange-500 hover:text-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-500"
               >
-                {area}
-              </div>
+                Доставка: {area}
+              </a>
             ))}
           </div>
         </div>
