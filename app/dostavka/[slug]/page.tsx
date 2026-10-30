@@ -140,6 +140,7 @@ export default async function DeliveryAreaPage({
           <span className="mx-3 text-zinc-500">·</span>
           <a href="/#materials" className="text-orange-500 hover:underline">
             Переглянути матеріали
+          </a>
         </p>
       </div>
     </main>
