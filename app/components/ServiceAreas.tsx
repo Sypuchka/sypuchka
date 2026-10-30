@@ -112,7 +112,7 @@ function slugify(value: string) {
 
 export default function ServiceAreas() {
   return (
-    <section className="bg-black py-20">
+    <section id="service-areas" className="bg-black py-20">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="mb-8 text-center text-4xl font-black text-white">
           Населені пункти, куди ми доставляємо
@@ -126,7 +126,7 @@ export default function ServiceAreas() {
                 href={`/dostavka/${slugify(area)}`}
                 className="rounded-xl border border-zinc-800 bg-zinc-800/40 px-4 py-3 text-white transition hover:border-orange-500 hover:text-orange-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-500"
               >
-                Доставка у {area}
+                Доставка: {area}
               </a>
             ))}
           </div>
