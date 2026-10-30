@@ -47,7 +47,7 @@ export async function generateMetadata({
   if (!area) return {};
 
   return {
-    title: `Доставка піску, щебеню та сипучих матеріалів — ${area} | Сипучка`,
+    title: `Доставка піску, щебеню та сипучих матеріалів — ${area}`,
     description: `Замовте пісок, щебінь, відсів, ЩПС, чорнозем або ґрунт із доставкою. Населений пункт: ${area}. Уточніть вартість за телефоном 073 757 77 90.`,
     alternates: {
       canonical: `https://www.sypuchka.com.ua/dostavka/${slug}`,
