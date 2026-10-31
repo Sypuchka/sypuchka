@@ -3,6 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Watermark from "./Watermark";
 
 const materials = [
   { title: "Пісок річковий", price: 280, image: "/images/materials/pisok-richkovyi.jpg.png", href: "/materialy/pisok" },
@@ -37,7 +38,7 @@ export default function Materials() {
           {materials.map((item) => (
             <div key={item.title} className="group overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-950 transition-all duration-300 hover:-translate-y-1 hover:border-orange-500">
               <Link href={item.href} className="block overflow-hidden" aria-label={`${item.title} — детальніше про матеріал`}>
-                <div className="relative h-64 overflow-hidden"><Image src={item.image} alt={item.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1" /><div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" /></div>
+                <div className="relative h-64 overflow-hidden"><Image src={item.image} alt={item.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1" /><div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" /><Watermark /></div>
               </Link>
               <div className="p-6"><h3 className="mb-3 text-2xl font-black text-white"><Link href={item.href} className="hover:text-orange-500">{item.title}</Link></h3><p className="mb-4 text-center"><span className="block text-sm font-semibold uppercase tracking-wide text-zinc-400">Ціна від</span><span className="text-3xl font-black text-orange-400">{item.price} грн</span><span className="ml-1 text-sm text-zinc-300">/ тонна</span></p><Link href={item.href} className="mb-3 block text-center font-semibold text-orange-400 hover:underline">Детальніше про матеріал</Link><a href="tel:+380737577790" className="block rounded-full bg-orange-500 py-3 text-center text-lg font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-600">Замовити: 073 757 77 90</a></div>
             </div>
