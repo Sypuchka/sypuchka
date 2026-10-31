@@ -47,7 +47,7 @@ export default function Hero() {
               Самоскиди від 1 до 23 тонн
             </span>
             <span className="rounded-full border border-white/25 bg-black/30 px-4 py-2">
-              Щодня з 08:00 до 21:00
+              Щодня з 08:00 до 20:00
             </span>
           </div>
 
