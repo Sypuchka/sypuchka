@@ -25,16 +25,21 @@ export default function Navbar() {
     >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4">
 
-        {/* Логотип */}
-        <a href="#hero">
+        {/* Кнопка повернення на головну */}
+        <a
+          href="/"
+          aria-label="На головну сторінку"
+          className="flex min-h-14 items-center gap-2 rounded-xl border border-orange-500/70 bg-zinc-950/80 px-3 py-1.5 text-sm font-bold text-white shadow-lg transition hover:border-orange-400 hover:bg-zinc-900 hover:shadow-orange-500/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-orange-400 sm:gap-3 sm:px-4"
+        >
           <Image
             src="/images/logo.png"
-            alt="Логотип"
+            alt=""
             width={180}
             height={70}
             priority
-            className="h-14 w-auto md:h-[4.5rem]"
+            className="h-11 w-auto md:h-12"
           />
+          <span className="whitespace-nowrap">На головну</span>
         </a>
 
         {/* Контакти */}
