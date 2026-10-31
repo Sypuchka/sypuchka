@@ -5,17 +5,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 const materials = [
-  { title: "Пісок річковий", image: "/images/materials/pisok-richkovyi.jpg.png", href: "/materialy/pisok" },
-  { title: "Пісок яружний", image: "/images/materials/pisok-yaruzhnyi.jpg.png", href: "/materialy/pisok" },
-  { title: "Відсів", image: "/images/materials/vidsiv.jpg", href: "/materialy/vidsiv" },
-  { title: "Щебінь 5-20", image: "/images/materials/shchebin-5-20.jpg", href: "/materialy/shchebin" },
-  { title: "Щебінь 10-20", image: "/images/materials/shchebin-10-20.jpg", href: "/materialy/shchebin" },
-  { title: "Щебінь 20-40", image: "/images/materials/shchebin-20-40.jpg", href: "/materialy/shchebin" },
-  { title: "Щебінь 40-70", image: "/images/materials/shchebin-40-70.png", href: "/materialy/shchebin" },
-  { title: "ЩПС 0-40", image: "/images/materials/shps-0-40.png", href: "/materialy/shps" },
-  { title: "ЩПС 0-70", image: "/images/materials/shps-0-70.png", href: "/materialy/shps" },
-  { title: "Чорнозем родючий", image: "/images/materials/chornozem.jpg.png", href: "/materialy/chornozem" },
-  { title: "Ґрунт на підсипку", image: "/images/materials/grunt-pidsypka.jpg.png", href: "/materialy/grunt" },
+  { title: "Пісок річковий", price: 280, image: "/images/materials/pisok-richkovyi.jpg.png", href: "/materialy/pisok" },
+  { title: "Пісок яружний", price: 270, image: "/images/materials/pisok-yaruzhnyi.jpg.png", href: "/materialy/pisok" },
+  { title: "Відсів", price: 350, image: "/images/materials/vidsiv.jpg", href: "/materialy/vidsiv" },
+  { title: "Щебінь 5-20", price: 570, image: "/images/materials/shchebin-5-20.jpg", href: "/materialy/shchebin" },
+  { title: "Щебінь 10-20", price: 570, image: "/images/materials/shchebin-10-20.jpg", href: "/materialy/shchebin" },
+  { title: "Щебінь 20-40", price: 500, image: "/images/materials/shchebin-20-40.jpg", href: "/materialy/shchebin" },
+  { title: "Щебінь 40-70", price: 500, image: "/images/materials/shchebin-40-70.png", href: "/materialy/shchebin" },
+  { title: "ЩПС 0-40", price: 500, image: "/images/materials/shps-0-40.png", href: "/materialy/shps" },
+  { title: "ЩПС 0-70", price: 500, image: "/images/materials/shps-0-70.png", href: "/materialy/shps" },
+  { title: "Чорнозем родючий", price: 550, image: "/images/materials/chornozem.jpg.png", href: "/materialy/chornozem" },
+  { title: "Ґрунт на підсипку", price: 280, image: "/images/materials/grunt-pidsypka.jpg.png", href: "/materialy/grunt" },
 ];
 
 const organicFertilizers = [
@@ -31,7 +31,7 @@ export default function Materials() {
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 text-center">
           <h2 className="text-4xl font-black md:text-5xl">Наші матеріали</h2>
-          <p className="mx-auto mt-6 max-w-3xl text-lg text-zinc-300 md:text-xl">Постачаємо сипучі матеріали для будівництва, благоустрою території та приватних господарств.</p>
+          <p className="mx-auto mt-6 max-w-3xl text-lg text-zinc-300 md:text-xl">Постачаємо сипучі матеріали для будівництва, благоустрою території та приватних господарств.</p><p className="mx-auto mt-3 max-w-3xl text-sm text-zinc-400">Ціни вказані орієнтовно за тонну без доставки. Вартість доставки залежить від адреси та обсягу замовлення.</p>
         </div>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {materials.map((item) => (
@@ -39,7 +39,7 @@ export default function Materials() {
               <Link href={item.href} className="block overflow-hidden" aria-label={`${item.title} — детальніше про матеріал`}>
                 <div className="relative h-64 overflow-hidden"><Image src={item.image} alt={item.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-1" /><div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" /></div>
               </Link>
-              <div className="p-6"><h3 className="mb-6 text-2xl font-black text-white"><Link href={item.href} className="hover:text-orange-500">{item.title}</Link></h3><Link href={item.href} className="mb-3 block text-center font-semibold text-orange-400 hover:underline">Детальніше про матеріал</Link><a href="tel:+380737577790" className="block rounded-full bg-orange-500 py-4 text-center text-lg font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-600">Уточнити ціну: 073 757 77 90</a></div>
+              <div className="p-6"><h3 className="mb-3 text-2xl font-black text-white"><Link href={item.href} className="hover:text-orange-500">{item.title}</Link></h3><p className="mb-4 text-center"><span className="block text-sm font-semibold uppercase tracking-wide text-zinc-400">Ціна від</span><span className="text-3xl font-black text-orange-400">{item.price} грн</span><span className="ml-1 text-sm text-zinc-300">/ тонна</span></p><Link href={item.href} className="mb-3 block text-center font-semibold text-orange-400 hover:underline">Детальніше про матеріал</Link><a href="tel:+380737577790" className="block rounded-full bg-orange-500 py-3 text-center text-lg font-bold text-white transition-all duration-300 hover:scale-105 hover:bg-orange-600">Замовити: 073 757 77 90</a></div>
             </div>
           ))}
         </div>
