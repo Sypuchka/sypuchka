@@ -8,28 +8,20 @@ export default function Hero() {
       id="hero"
       className="relative z-0 flex min-h-screen items-center justify-center overflow-hidden"
     >
-      {/* Фон */}
       <Image
         src="/images/hero/truck-new.jpg"
-        alt="Доставка сипучих матеріалів"
+        alt="Доставка сипучих матеріалів самоскидом"
         fill
         priority
         className="pointer-events-none object-cover object-center"
       />
 
-      {/* Затемнення */}
       <div className="pointer-events-none absolute inset-0 bg-black/60" />
-
-      {/* Градієнт */}
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
-
-      {/* Світіння */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-500/20 blur-[120px] md:h-[500px] md:w-[500px] md:blur-[160px]" />
 
-      {/* Контент */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-24">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pb-20 pt-28">
         <div className="mx-auto max-w-4xl text-center">
-
           <h1 className="text-4xl font-black leading-tight text-white sm:text-5xl md:text-7xl">
             Доставка
             <span className="mt-2 block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
@@ -40,7 +32,6 @@ export default function Hero() {
           <p className="mt-5 text-lg font-bold text-white sm:text-xl md:text-3xl">
             Пісок • Щебінь • Відсів • ЩПС
           </p>
-
           <p className="mt-2 text-lg font-bold text-white sm:text-xl md:text-3xl">
             Чорнозем • Ґрунт
           </p>
@@ -51,21 +42,40 @@ export default function Hero() {
             та Білоцерківському районах.
           </p>
 
-          <div className="mt-10">
-            <a
-              href="tel:+380737577790"
-              className="inline-flex w-full items-center justify-center rounded-full bg-orange-500 px-8 py-4 text-lg font-black text-white shadow-[0_0_35px_rgba(249,115,22,0.6)] transition-all duration-300 hover:scale-110 hover:bg-orange-600 hover:shadow-[0_0_45px_rgba(249,115,22,0.8)] sm:w-auto sm:px-12 sm:py-5 sm:text-xl md:text-2xl"
-            >
-              📞 Замовити доставку
-            </a>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm font-semibold text-white sm:gap-5 sm:text-base">
+            <span className="rounded-full border border-white/25 bg-black/30 px-4 py-2">
+              Самоскиди від 1 до 23 тонн
+            </span>
+            <span className="rounded-full border border-white/25 bg-black/30 px-4 py-2">
+              Щодня з 08:00 до 21:00
+            </span>
           </div>
 
+          <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <a
+              href="tel:+380737577790"
+              className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-orange-500 px-8 py-4 text-lg font-black text-white shadow-[0_0_35px_rgba(249,115,22,0.6)] transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-[0_0_45px_rgba(249,115,22,0.8)] sm:w-auto sm:px-12 sm:text-xl"
+            >
+              📞 Зателефонувати: 073 757 77 90
+            </a>
+            <a
+              href="https://t.me/samo_svall"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-14 w-full items-center justify-center rounded-full border-2 border-white/70 bg-black/30 px-8 py-4 text-lg font-bold text-white transition hover:border-orange-400 hover:bg-black/60 sm:w-auto"
+            >
+              Написати в Telegram
+            </a>
+          </div>
+          <p className="mt-4 text-sm text-zinc-300">
+            Зателефонуйте — допоможемо підібрати матеріал і транспорт.
+          </p>
         </div>
       </div>
 
-      {/* Стрілка */}
       <a
         href="#materials"
+        aria-label="Перейти до матеріалів"
         className="absolute bottom-6 left-1/2 z-20 -translate-x-1/2 animate-bounce text-4xl text-white transition hover:text-orange-400 md:text-5xl"
       >
         ↓
