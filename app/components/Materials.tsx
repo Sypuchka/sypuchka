@@ -3,7 +3,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Link from "next/link";
 
 const materials = [
   { title: "Пісок річковий", image: "/images/materials/pisok-richkovyi.jpg.png", href: "/materialy/pisok" },

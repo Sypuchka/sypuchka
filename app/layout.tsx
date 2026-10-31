@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
   title: {
     default: "Sypuchka — доставка сипучих матеріалів і добрив",
-    template: "%s | Sypuchka — матеріали та добрива",
+    template: "%s | Сипучка",
   },
 
   description:
