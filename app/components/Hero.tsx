@@ -51,21 +51,29 @@ export default function Hero() {
             </span>
           </div>
 
-          <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row sm:items-start">
             <a
               href="tel:+380737577790"
               className="inline-flex min-h-14 w-full items-center justify-center rounded-full bg-orange-500 px-8 py-4 text-lg font-black text-white shadow-[0_0_35px_rgba(249,115,22,0.6)] transition-all duration-300 hover:scale-105 hover:bg-orange-600 hover:shadow-[0_0_45px_rgba(249,115,22,0.8)] sm:w-auto sm:px-12 sm:text-xl"
             >
               📞 Зателефонувати: 073 757 77 90
             </a>
-            <a
-              href="https://t.me/samo_svall"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex min-h-14 w-full items-center justify-center rounded-full border-2 border-white/70 bg-black/30 px-8 py-4 text-lg font-bold text-white transition hover:border-orange-400 hover:bg-black/60 sm:w-auto"
-            >
-              Написати в Telegram
-            </a>
+            <div className="flex w-full flex-col gap-3 sm:w-auto">
+              <a
+                href="https://t.me/samo_svall"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-14 w-full items-center justify-center rounded-full border-2 border-sky-400 bg-sky-500 px-8 py-4 text-lg font-bold text-white shadow-lg shadow-sky-500/20 transition hover:scale-105 hover:bg-sky-600 sm:min-w-64"
+              >
+                Написати в Telegram
+              </a>
+              <a
+                href="viber://chat?number=%2B380737577790"
+                className="inline-flex min-h-14 w-full items-center justify-center rounded-full border-2 border-purple-400 bg-purple-600 px-8 py-4 text-lg font-bold text-white shadow-lg shadow-purple-500/20 transition hover:scale-105 hover:bg-purple-700 sm:min-w-64"
+              >
+                Написати у Viber
+              </a>
+            </div>
           </div>
           <p className="mt-4 text-sm text-zinc-300">
             Зателефонуйте — допоможемо підібрати матеріал і транспорт.
