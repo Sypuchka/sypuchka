@@ -21,7 +21,7 @@ export default function Schema() {
           "Доставка піску, щебеню, відсіву, ЩПС, чорнозему, ґрунту та органічних добрив.",
         telephone: "+380737577790",
         areaServed: areas,
-        openingHours: "Mo-Su 08:00-21:00",
+        openingHours: "Mo-Su 08:00-20:00",
       },
     ],
   };
