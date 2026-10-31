@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Watermark from "./Watermark";
 
 export default function Hero() {
   return (
@@ -17,6 +18,7 @@ export default function Hero() {
       />
 
       <div className="pointer-events-none absolute inset-0 bg-black/60" />
+      <Watermark />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[350px] w-[350px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-500/20 blur-[120px] md:h-[500px] md:w-[500px] md:blur-[160px]" />
 
