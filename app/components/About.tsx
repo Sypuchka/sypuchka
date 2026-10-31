@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Watermark from "./Watermark";
 
 export default function About() {
   return (
@@ -38,6 +39,7 @@ export default function About() {
             />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            <Watermark />
 
           </div>
 
